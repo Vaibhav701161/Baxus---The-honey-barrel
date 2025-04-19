@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-luxury-black text-luxury-cream font-inter;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-playfair;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply px-4 py-2 rounded font-medium transition-all duration-300;
+  }
+  
+  .btn-primary {
+    @apply bg-luxury-gold text-luxury-black hover:bg-luxury-gold-light;
+  }
+  
+  .card {
+    @apply bg-luxury-dark rounded-lg p-4 shadow-luxury border border-luxury-gold/10;
+  }
+  
+  .savings-badge {
+    @apply bg-luxury-gold/90 text-luxury-black text-xs px-2 py-1 rounded-full font-medium;
+  }
+} 
