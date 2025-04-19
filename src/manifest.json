@@ -1,0 +1,38 @@
+{
+  "manifest_version": 3,
+  "name": "The Honey Barrel",
+  "version": "1.0.0",
+  "description": "Scrape whisky/wine bottle data and find better deals on BAXUS marketplace",
+  "icons": {
+    "16": "icons/icon128.svg",
+    "48": "icons/icon128.svg",
+    "128": "icons/icon128.svg"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon128.svg",
+      "48": "icons/icon128.svg",
+      "128": "icons/icon128.svg"
+    }
+  },
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "storage"
+  ],
+  "host_permissions": [
+    "https://services.baxus.co/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": ["contentScript.js"]
+    }
+  ]
+} 
